@@ -1,6 +1,6 @@
 # dial
 
-![Version: 3.3.0](https://img.shields.io/badge/Version-3.3.0-informational?style=flat-square) ![AppVersion: 1.17.0](https://img.shields.io/badge/AppVersion-1.17.0-informational?style=flat-square)
+![Version: 4.0.0](https://img.shields.io/badge/Version-4.0.0-informational?style=flat-square) ![AppVersion: 1.17.0](https://img.shields.io/badge/AppVersion-1.17.0-informational?style=flat-square)
 
 Umbrella chart for DIAL solution
 
@@ -16,17 +16,17 @@ Kubernetes: `>=1.23.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | common | 2.14.1 |
-| https://charts.bitnami.com/bitnami | keycloak | 16.1.7 |
-| https://charts.epam-rail.com | core(dial-core) | 3.0.2 |
-| https://charts.epam-rail.com | authhelper(dial-extension) | 1.0.6 |
-| https://charts.epam-rail.com | chat(dial-extension) | 1.0.6 |
-| https://charts.epam-rail.com | themes(dial-extension) | 1.0.6 |
-| https://charts.epam-rail.com | openai(dial-extension) | 1.0.6 |
-| https://charts.epam-rail.com | bedrock(dial-extension) | 1.0.6 |
-| https://charts.epam-rail.com | vertexai(dial-extension) | 1.0.6 |
-| https://charts.epam-rail.com | assistant(dial-extension) | 1.0.6 |
-| https://charts.epam-rail.com | dial(dial-extension) | 1.0.6 |
+| https://charts.bitnami.com/bitnami | common | 2.26.0 |
+| https://charts.bitnami.com/bitnami | keycloak | 24.0.1 |
+| https://nepalevov.github.io/ai-dial-helm | core(dial-core) | 4.0.0 |
+| https://nepalevov.github.io/ai-dial-helm | authhelper(dial-extension) | 2.0.0 |
+| https://nepalevov.github.io/ai-dial-helm | chat(dial-extension) | 2.0.0 |
+| https://nepalevov.github.io/ai-dial-helm | themes(dial-extension) | 2.0.0 |
+| https://nepalevov.github.io/ai-dial-helm | openai(dial-extension) | 2.0.0 |
+| https://nepalevov.github.io/ai-dial-helm | bedrock(dial-extension) | 2.0.0 |
+| https://nepalevov.github.io/ai-dial-helm | vertexai(dial-extension) | 2.0.0 |
+| https://nepalevov.github.io/ai-dial-helm | assistant(dial-extension) | 2.0.0 |
+| https://nepalevov.github.io/ai-dial-helm | dial(dial-extension) | 2.0.0 |
 
 ## Installing the Chart
 
@@ -123,7 +123,7 @@ helm install my-release dial/dial -f values.yaml
 | extraDeploy | list | `[]` |  |
 | keycloak.enabled | bool | `false` | Enable/disable keycloak |
 | keycloak.extraEnvVars[0].name | string | `"KC_FEATURES"` |  |
-| keycloak.extraEnvVars[0].value | string | `"token-exchange,admin-fine-grained-authz,declarative-user-profile"` |  |
+| keycloak.extraEnvVars[0].value | string | `"token-exchange,admin-fine-grained-authz"` |  |
 | keycloak.keycloakConfigCli.enabled | bool | `true` |  |
 | keycloak.keycloakConfigCli.extraEnvVars[0].name | string | `"IMPORT_VARSUBSTITUTION_ENABLED"` |  |
 | keycloak.keycloakConfigCli.extraEnvVars[0].value | string | `"true"` |  |
